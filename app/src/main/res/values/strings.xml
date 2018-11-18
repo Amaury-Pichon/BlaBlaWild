@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">BlaBlaWild</string>
+    <string name="button_main_activity">SEARCH AN ITINERARY</string>
+    <string name="message_search">Voici la phrase transférée</string>
+    <string name="search_text">Search</string>
+    <string name="search_destination">Destination</string>
+    <string name="search_date">Date</string>
+    <string name="search_departure">Departure</string>
+    <string name="search_date_edittext">01/01/1970</string>
+    <string name="search_button">SEARCH</string>
+    <string name="search_error">Veuillez remplir le départ et la destination</string>
 </resources>
