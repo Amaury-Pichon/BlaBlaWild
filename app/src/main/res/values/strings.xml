@@ -9,4 +9,5 @@
     <string name="search_date_edittext">01/01/1970</string>
     <string name="search_button">SEARCH</string>
     <string name="search_error">Veuillez remplir le départ et la destination</string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>
