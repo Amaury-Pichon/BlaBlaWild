@@ -40,7 +40,5 @@ public class ItinerarySearchActivity extends AppCompatActivity {
             itineraryListIntent.putExtra(EXTRA_DATE, date.getText().toString());
             startActivity(itineraryListIntent);
         }
-
-
     }
 }

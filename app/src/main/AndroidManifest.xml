@@ -11,12 +11,21 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".ItinerarySearchActivity"
-            android:label="@string/search_text" />
-        <activity android:name=".ItineraryListActivity" />
+            android:label="@string/search_text"
+            android:parentActivityName=".ItineraryListActivity"/>
+        <activity
+            android:name=".ItineraryListActivity"
+            android:parentActivityName=".ItinerarySearchActivity"/>
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
