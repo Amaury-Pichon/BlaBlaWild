@@ -37,6 +37,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:ems="10"
+        android:focusable="false"
         android:inputType="date"
         android:text="@string/search_date_edittext"
         app:layout_constraintStart_toStartOf="parent"
