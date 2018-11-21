@@ -10,4 +10,8 @@
     <string name="search_button">SEARCH</string>
     <string name="search_error">Veuillez remplir le départ et la destination</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="itinerary_price">$19</string>
+    <string name="itinerary_date">31/12/1970 03:30 PM</string>
+    <string name="driver_firstname">firstname</string>
+    <string name="driver_lastname">lastname</string>
 </resources>
