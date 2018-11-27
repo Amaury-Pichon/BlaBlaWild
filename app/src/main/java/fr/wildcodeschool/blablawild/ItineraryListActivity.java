@@ -16,16 +16,16 @@ public class ItineraryListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_itinerary_list);
 
         Intent intent = getIntent();
-        String departure = intent.getStringExtra(ItinerarySearchActivity.EXTRA_DEPARTURE);
-        String destination = intent.getStringExtra((ItinerarySearchActivity.EXTRA_DESTINATION));
+        String departure = intent.getStringExtra(getString(R.string.EXTRA_DEPARTURE));
+        String destination = intent.getStringExtra(getString(R.string.EXTRA_DESTINATION));
 
         CharSequence newTitle = departure + " >> " + destination;
         this.setTitle(newTitle);
 
         ListView listTrip = findViewById(R.id.list_trip);
-        ArrayList<TripModel> results = new ArrayList<>();
+        ArrayList<TripModel> results = new ArrayList<TripModel>();
 
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy-hh:mm");
+        SimpleDateFormat sdf = new SimpleDateFormat(getString(R.string.date_format_in));
 
         try {
             results.add(new TripModel("Eric", "Cartman", sdf.parse("21/02/2017-15:30"), 15));
@@ -33,6 +33,7 @@ public class ItineraryListActivity extends AppCompatActivity {
             results.add(new TripModel("Kenny", "Broflovski", sdf.parse("21/02/2017-16:30"), 16));
             results.add(new TripModel("Kyle", "McCormick", sdf.parse("21/02/2017-17:00"), 40));
             results.add(new TripModel("Wendy", "Testaburger", sdf.parse("21/02/2017-17:30"), 20));
+            results.add(new TripModel("Amaury", "Pichon", sdf.parse("21/11/2018-18:30"), 200));
         } catch (ParseException e) {
         }
         TripAdapter adapter = new TripAdapter(this, results);

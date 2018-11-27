@@ -15,13 +15,6 @@ import java.text.*;
 
 public class ItinerarySearchActivity extends AppCompatActivity {
 
-    public static final String EXTRA_DEPARTURE = "fr.wildcodeschool.blablawild.DEPARTURE";
-    public static final String EXTRA_DESTINATION = "fr.wildcodeschool.blablawild.DESTINATION";
-    public static final String EXTRA_DATE = "fr.wildcodeschool.blablawild.DATE";
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,15 +63,15 @@ public class ItinerarySearchActivity extends AppCompatActivity {
         }
         else{
             Intent itineraryListIntent = new Intent(this, ItineraryListActivity.class);
-            itineraryListIntent.putExtra(EXTRA_DEPARTURE, departure.getText().toString());
-            itineraryListIntent.putExtra(EXTRA_DESTINATION, destination.getText().toString());
-            itineraryListIntent.putExtra(EXTRA_DATE, editDate.getText().toString());
+            itineraryListIntent.putExtra(getString(R.string.EXTRA_DEPARTURE), departure.getText().toString());
+            itineraryListIntent.putExtra(getString(R.string.EXTRA_DESTINATION), destination.getText().toString());
+            itineraryListIntent.putExtra(getString(R.string.EXTRA_DATE), editDate.getText().toString());
             startActivity(itineraryListIntent);
         }
     }
 
     private void updateLabel(Calendar myCalendar, EditText editDate) {
-        String myFormat = "MM/dd/yy"; //In which you need put here
+        String myFormat = getString(R.string.date_format_search); //In which you need put here
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
         editDate.setText(sdf.format(myCalendar.getTime()));

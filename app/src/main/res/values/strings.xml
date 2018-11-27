@@ -1,17 +1,23 @@
 <resources>
     <string name="app_name">BlaBlaWild</string>
-    <string name="button_main_activity">SEARCH AN ITINERARY</string>
+    <string name="button_main_activity">CHERCHER UN INTINERAIRE</string>
     <string name="message_search">Voici la phrase transférée</string>
-    <string name="search_text">Search</string>
+    <string name="search_text">Rechercher</string>
     <string name="search_destination">Destination</string>
     <string name="search_date">Date</string>
-    <string name="search_departure">Departure</string>
+    <string name="search_departure">Depart</string>
     <string name="search_date_edittext">01/01/1970</string>
-    <string name="search_button">SEARCH</string>
+    <string name="search_button">RECHERCHER</string>
     <string name="search_error">Veuillez remplir le départ et la destination</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="itinerary_price">$19</string>
-    <string name="itinerary_date">31/12/1970 03:30 PM</string>
-    <string name="driver_firstname">firstname</string>
-    <string name="driver_lastname">lastname</string>
+    <string name="itinerary_price">19€</string>
+    <string name="driver_firstname">prénom</string>
+    <string name="date_format_search">dd/MM/yy</string>
+    <string name="date_format_list_out">dd/MM/yyyy h:m a</string>
+    <string name="date_format_in">dd/MM/yyyy-hh:mm</string>
+    <string name="itinerary_date">01/01/1970-00:00</string>
+    <string name="driver_lastname">nom</string>
+    <string name="EXTRA_DEPARTURE">fr.wildcodeschool.blablawild.DEPARTURE</string>
+    <string name="EXTRA_DESTINATION">fr.wildcodeschool.blablawild.DESTINATION</string>
+    <string name="EXTRA_DATE">fr.wildcodeschool.blablawild.DATE</string>
 </resources>

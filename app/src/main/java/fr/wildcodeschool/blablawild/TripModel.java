@@ -1,5 +1,8 @@
 package fr.wildcodeschool.blablawild;
 
+import android.app.Application;
+import android.content.Context;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -9,11 +12,6 @@ public class TripModel {
     private Date date;
     private int price;
 
-    public TripModel(){
-        this.firstname = "firstname";
-        this.lastname = "lastname";
-        this.price = 0;
-    }
 
     public TripModel(String firstname, String lastname, Date date, int price){
         this.firstname = firstname;
