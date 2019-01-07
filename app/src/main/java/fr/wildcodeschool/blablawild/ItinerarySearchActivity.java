@@ -15,7 +15,8 @@ import java.text.*;
 
 public class ItinerarySearchActivity extends AppCompatActivity {
 
-    @Override
+    public static final String EXTRA_TRIP = "fr.wildcodeschool.blablawild.EXTRA_TRIP";
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_itinerary_search);
@@ -55,6 +56,8 @@ public class ItinerarySearchActivity extends AppCompatActivity {
         final EditText destination = findViewById(R.id.editTextDestination);
         final EditText editDate = (EditText) findViewById(R.id.editTextDate);
 
+        SearchModel trip = new SearchModel(departure.getText().toString(), destination.getText().toString(), editDate.getText().toString());
+
 
         if (departure.getText().toString().matches("")||destination.getText().toString().matches("")){
             Toast searchToast = Toast.makeText(getApplicationContext(), getResources().getString(R.string.search_error), Toast.LENGTH_SHORT);
@@ -63,9 +66,10 @@ public class ItinerarySearchActivity extends AppCompatActivity {
         }
         else{
             Intent itineraryListIntent = new Intent(this, ItineraryListActivity.class);
-            itineraryListIntent.putExtra(getString(R.string.EXTRA_DEPARTURE), departure.getText().toString());
-            itineraryListIntent.putExtra(getString(R.string.EXTRA_DESTINATION), destination.getText().toString());
-            itineraryListIntent.putExtra(getString(R.string.EXTRA_DATE), editDate.getText().toString());
+//            itineraryListIntent.putExtra(getString(R.string.EXTRA_DEPARTURE), departure.getText().toString());
+//            itineraryListIntent.putExtra(getString(R.string.EXTRA_DESTINATION), destination.getText().toString());
+//            itineraryListIntent.putExtra(getString(R.string.EXTRA_DATE), editDate.getText().toString());
+            itineraryListIntent.putExtra(EXTRA_TRIP, trip);
             startActivity(itineraryListIntent);
         }
     }

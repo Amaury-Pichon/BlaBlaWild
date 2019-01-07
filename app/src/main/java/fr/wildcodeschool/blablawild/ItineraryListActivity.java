@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.text.*;
 import java.util.ArrayList;
@@ -16,8 +17,15 @@ public class ItineraryListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_itinerary_list);
 
         Intent intent = getIntent();
-        String departure = intent.getStringExtra(getString(R.string.EXTRA_DEPARTURE));
-        String destination = intent.getStringExtra(getString(R.string.EXTRA_DESTINATION));
+
+
+        SearchModel trip = intent.getParcelableExtra(ItinerarySearchActivity.EXTRA_TRIP);
+
+        String departure = trip.getDeparture();
+        String destination = trip.getDestination();
+        String date = trip.getDate();
+
+        Toast.makeText(this, date, Toast.LENGTH_SHORT).show();
 
         CharSequence newTitle = departure + " >> " + destination;
         this.setTitle(newTitle);
